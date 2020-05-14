@@ -1,4 +1,4 @@
-# pyscf
+# pyscf-pyglet-psi4
 #
 # to create environment:
 #	mv <this-file>.yml <environment>.yml
@@ -7,10 +7,15 @@
 # after creation:
 # 	conda activate <environment>
 #
+# this env also contains psi4 and pyglet
+#
 # note the pip dependency
 #  - pip:
 #    - pyscf==1.7.0
-name: libra-pyscf
+#
+# The pip install is done to try to avoid the GLIBC 2.14 dependence of conda installed pyscf package.
+# imported from libra-pyscf env, debian7
+name: pyscf-pyglet-psi4
 channels:
   - anaconda
   - rmg
