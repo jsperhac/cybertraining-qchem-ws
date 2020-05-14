@@ -1,4 +1,4 @@
-# activating the libra-4.4.0 install
+# Activating the libra-4.4.0 install
 
 This is a cleaner way of activating the environment (than using the python
 environment explicitly) since it sets all paths for the user, thanks to the
@@ -14,7 +14,7 @@ which python
 python --version
 ```
 
-If no anaconda-6 paths, specify:
+If the path is not to an anaconda-6 directory, specify:
 ```
 source /etc/environ.sh
 use anaconda-6
@@ -22,20 +22,20 @@ conda info --envs
 conda activate base
 ```
 
-If conda env activation error message then do the following:
+If conda env activation error message displays, then do the following:
 `conda init bash`
-(log out of Workspace shell, then restart shell)
-`conda activate base`
-(should show base env)
+then log out of Workspace shell, and restart shell. Run 
+`conda activate base`. Now the terminal should show the base env. 
+
+Let's verify and activate the desired env:
 
 ```
 conda info --envs
-(should show libra-4.4.0)
 conda activate libra-4.4.0
 ```
-
+Now, 
 `which python` 
-(should show path to the libra-4.4.0 python since we use conflict ANACONDA_CHOICE set to that installation)
+should show the path to the libra-4.4.0 python, since we use conflict ANACONDA_CHOICE set to that installation.
 
 ## From Jupyter tool
 
