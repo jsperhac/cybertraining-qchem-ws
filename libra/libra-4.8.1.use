@@ -1,0 +1,18 @@
+# Hubzero "use" script housed in /apps/share64/debian7/environ.d/
+# These set the needed paths so that modules installed in /apps can be called
+# For installation, omit ".use" from filename
+
+conflict ANACONDA_CHOICE
+desc "Libra is a computational chemistry methodology library"
+help "https://quantum-dynamics-hub.github.io/libra/index.html"
+version=4.8.1
+
+# condabin must be set for the libra environmnent
+prepend PATH /apps/share64/debian7/anaconda/anaconda-6/envs/libra-4.8.1/bin:/apps/share64/debian7/anaconda/anaconda-6/envs/libra-4.8.1/condabin
+
+# enable python to search for packages in libra environment, and in the base one:
+prepend PYTHONPATH /apps/share64/debian7/libra/build/src:/apps/share64/debian7/anaconda/anaconda-6/envs/libra-4.8.1/bin:/apps/share64/debian7/anaconda/anaconda-6/envs/libra-4.8.1/lib/python37.zip:/apps/share64/debian7/anaconda/anaconda-6/envs/libra-4.8.1/lib/python3.7:/apps/share64/debian7/anaconda/anaconda-6/envs/libra-4.8.1/lib/python3.7/lib-dynload:/apps/share64/debian7/anaconda/anaconda-6/envs/libra-4.8.1/lib/python3.7/site-packages:/apps/share64/debian7/anaconda/anaconda-6/lib/python37.zip:/apps/share64/debian7/anaconda/anaconda-6/lib/python3.7:/apps/share64/debian7/anaconda/anaconda-6/lib/python3.7/lib-dynload:/apps/share64/debian7/anaconda/anaconda-6/lib/python3.7/site-packages
+
+prepend LD_LIBRARY_PATH /apps/share64/debian7/libra/build/src:/apps/share64/debian7/anaconda/anaconda-6/envs/libra-4.8.1/bin
+
+tags MATHSCI
