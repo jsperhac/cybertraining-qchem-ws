@@ -68,3 +68,9 @@ echo $PATH
 ## Assumptions
 
 Vidia with hubzero; debian7 containers; anaconda-6 install. 
+
+## Caution
+
+- Do not use `pyscf` in the libra-4.4.0 env; it was installed via conda and needs GLIBC 2.14 (not found on debian7). 
+- Instead, try the libra-pyscf env, which installed pyscf via pip and appears to work properly.
+- Future: with GLIBC approx. 2.19, compile pyscf by hand or install via conda
