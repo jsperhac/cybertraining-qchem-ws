@@ -8,7 +8,19 @@ be used inside python itself with the hublib library (see "From Jupyter Tool").
 The libra install was performed using anaconda-6 environment. User can activate
 the libra-4.4.0 environment, then set the paths manually, if desired.
 
+Substitute 4.8.1 for 4.4.0 to get that version of Libra!
+
 ## From Workspace tool
+
+### tl;dr
+```
+source /etc/environ.sh
+use libra-4.4.0
+```
+Now you should have the libra env's packages in your path.
+
+### The long story
+First check which python version you are pointing to:
 ```
 which python
 python --version
@@ -35,7 +47,8 @@ conda activate libra-4.4.0
 ```
 Now, 
 `which python` 
-should show the path to the libra-4.4.0 python, since we use conflict ANACONDA_CHOICE set to that installation.
+should show the path to the libra-4.4.0 python, since we specify `conflict ANACONDA_CHOICE` in the libra use script.
+This procedure should set up the same paths as the `use` script!
 
 ## From Jupyter tool
 
@@ -52,3 +65,6 @@ then, to verify paths (good for single notebook cell only):
 %%bash
 echo $PATH
 ```
+## Assumptions
+
+Vidia with hubzero; debian7 containers; anaconda-6 install. 
